@@ -40,36 +40,6 @@
                                 <field name="firma_responsable" widget="image"/>
                             </group>
                         </group>
-                        <group>
-                            <group>
-                                <field name="proveedor_secundario_id"/>
-                                <field name="contrato_id"/>
-                            </group>
-                        </group>
-                        <group>
-                            <field name="historial_inspecciones_ids">
-                                <tree editable="bottom">
-                                    <field name="fecha_inspeccion"/>
-                                    <field name="inspector_name"/>
-                                    <field name="resultados"/>
-                                </tree>
-                                <form>
-                                    <group>
-                                        <field name="fecha_inspeccion"/>
-                                        <field name="inspector_name"/>
-                                        <field name="resultados"/>
-                                        <field name="notas"/>
-                                    </group>
-                                </form>
-                            </field>
-                        </group>
-                        <group>
-                            <group>
-                                <field name="conformidad"/>
-                                <field name="comentarios_auditoria"/>
-                                <field name="notas_adicionales"/>
-                            </group>
-                        </group>
                     </page>
                 </xpath>
             </field>
