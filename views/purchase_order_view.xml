@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+        <!-- Heredar la vista del formulario de órdenes de compra -->
+        <record id="view_order_form_inherit_fuel" model="ir.ui.view">
+            <field name="name">purchase.order.form.fuel.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <!-- Agregar una nueva página al notebook -->
+                <xpath expr="//sheet/notebook" position="inside">
+                    <page string="Recepción de Combustible">
+                        <group>
+                            <group>
+                                <field name="fecha_hora_recepcion"/>
+                                <field name="pipa_id"/>
+                                <field name="transportista_id"/>
+                                <field name="chofer_name"/>
+                                <field name="chofer_license"/>
+                                <field name="sello_seguridad"/>
+                                <field name="tipo_combustible"/>
+                                <field name="fuel_source"/>
+                            </group>
+                            <group>
+                                <field name="quantity_expected"/>
+                                <field name="quantity_received"/>
+                                <field name="diferencia_merma"/>
+                                <field name="motivo_diferencia"/>
+                                <field name="densidad_combustible"/>
+                                <field name="temperatura_combustible"/>
+                                <field name="temperatura_ambiente"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="documentos_adjuntos" filename="documentos_adjuntos_filename" widget="binary"/>
+                                <field name="documentacion_regulatoria" filename="documentacion_regulatoria_filename" widget="binary"/>
+                            </group>
+                            <group>
+                                <field name="fotos_recepcion" widget="many2many_binary"/>
+                                <field name="firma_responsable" widget="image"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="proveedor_secundario_id"/>
+                            <field name="contrato_id"/>
+                        </group>
+                        <group>
+                            <field name="historial_inspecciones_ids">
+                                <tree editable="bottom">
+                                    <field name="fecha_inspeccion"/>
+                                    <field name="inspector_name"/>
+                                    <field name="resultados"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="fecha_inspeccion"/>
+                                        <field name="inspector_name"/>
+                                        <field name="resultados"/>
+                                        <field name="notas"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="conformidad"/>
+                                <field name="comentarios_auditoria"/>
+                                <field name="notas_adicionales"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
