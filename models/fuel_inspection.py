@@ -1,3 +1,4 @@
+# models\fuel_inspection.py
 from odoo import models, fields
 
 class FuelInspection(models.Model):

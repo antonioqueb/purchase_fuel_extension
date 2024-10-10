@@ -1,3 +1,4 @@
+# models\purchase_contract.py
 from odoo import models, fields
 
 class PurchaseContract(models.Model):
