@@ -7,6 +7,6 @@ class FuelInspection(models.Model):
 
     purchase_order_id = fields.Many2one('purchase.order', string='Orden de Compra')
     fecha_inspeccion = fields.Datetime(string='Fecha de Inspección')
-    inspector_id = fields.Many2one('hr.employee', string='Inspector')
+    inspector_name = fields.Char(string='Nombre del Inspector')
     resultados = fields.Text(string='Resultados')
     notas = fields.Text(string='Notas')

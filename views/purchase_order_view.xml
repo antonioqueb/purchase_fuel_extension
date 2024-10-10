@@ -12,8 +12,8 @@
                         <group>
                             <group>
                                 <field name="fecha_hora_recepcion"/>
-                                <field name="pipa_id"/>
-                                <field name="transportista_id"/>
+                                <field name="pipa"/>
+                                <field name="transportista"/>
                                 <field name="chofer_name"/>
                                 <field name="chofer_license"/>
                                 <field name="sello_seguridad"/>
@@ -41,8 +41,10 @@
                             </group>
                         </group>
                         <group>
-                            <field name="proveedor_secundario_id"/>
-                            <field name="contrato_id"/>
+                            <group>
+                                <field name="proveedor_secundario_id"/>
+                                <field name="contrato_id"/>
+                            </group>
                         </group>
                         <group>
                             <field name="historial_inspecciones_ids">
