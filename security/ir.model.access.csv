@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fuel_inspection_user,fuel.inspection.user,model_fuel_inspection,base.group_user,1,1,1,1
+access_purchase_contract_user,purchase.contract.user,model_purchase_contract,base.group_user,1,1,1,1

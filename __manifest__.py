@@ -1,0 +1,15 @@
+{
+    'name': 'Extensión de Órdenes de Compra para Combustible',
+    'version': '1.0',
+    'summary': 'Extiende las órdenes de compra para gestionar recepciones de combustible',
+    'description': 'Este módulo agrega campos y modelos adicionales al módulo de Compras para gestionar la recepción y control de combustible.',
+    'author': 'ALPHAQUEB CONSULTING S.A.S.',
+    'category': 'Purchases',
+    'depends': ['purchase', 'fleet', 'hr'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/purchase_order_view.xml',
+    ],
+    'installable': True,
+    'application': False,
+}
