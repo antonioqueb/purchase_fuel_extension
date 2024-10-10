@@ -17,14 +17,8 @@
                                 <field name="chofer_name"/>
                                 <field name="chofer_license"/>
                                 <field name="sello_seguridad"/>
-                                <field name="tipo_combustible"/>
-                                <field name="fuel_source"/>
                             </group>
                             <group>
-                                <field name="quantity_expected"/>
-                                <field name="quantity_received"/>
-                                <field name="diferencia_merma"/>
-                                <field name="motivo_diferencia"/>
                                 <field name="densidad_combustible"/>
                                 <field name="temperatura_combustible"/>
                                 <field name="temperatura_ambiente"/>
@@ -38,6 +32,36 @@
                             <group>
                                 <field name="fotos_recepcion" widget="many2many_binary"/>
                                 <field name="firma_responsable" widget="image"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="proveedor_secundario_id"/>
+                                <field name="contrato_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="historial_inspecciones_ids">
+                                <tree editable="bottom">
+                                    <field name="fecha_inspeccion"/>
+                                    <field name="inspector_name"/>
+                                    <field name="resultados"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="fecha_inspeccion"/>
+                                        <field name="inspector_name"/>
+                                        <field name="resultados"/>
+                                        <field name="notas"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="conformidad"/>
+                                <field name="comentarios_auditoria"/>
+                                <field name="notas_adicionales"/>
                             </group>
                         </group>
                     </page>
